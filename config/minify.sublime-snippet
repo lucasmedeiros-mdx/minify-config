@@ -1,0 +1,38 @@
+<snippet>
+	<content><![CDATA[
+{
+	"javascript": {
+		"files": {
+			"${1:app}": [
+				"${2:js/}jquery.js",
+				"${2:js/}${3:bootstrap}.js",				
+				"${2:js/}${4:plugins}.js",
+				"${2:js/}${5:main}.js"
+			]
+		},
+		"folders": "${2:js/}${6:(vendor|plugins)}",
+		"output": {
+			"files": "${2:js/}${7:min}",
+			"folders": "${8:{folder\}/min}"
+		}
+	},
+	"css": {
+		"files": {
+			"${9:app}": [
+				"${10:css/}${11:bootstrap.css}",
+				"${10:css/}${12:bootstrap-responsive.css}",
+				"${10:css/}${13:main.less}"
+			]
+		},
+		"folders": "${10:css/}${14:(less)}",
+		"output": {
+			"files": "${10:css/}${15}",
+			"folders": "${16:\${folder\}/min}"
+		}
+	}
+}
+]]></content>
+	<tabTrigger>minify</tabTrigger>
+	<scope>source.json</scope>	
+	<description>NPM Minify configuration file</description>	
+</snippet>

@@ -5,7 +5,7 @@ Configuration tool for minifying your scripts.
 
 ##Installation
 
-> npm install -g minify-config
+> npm install minify-config
 
 
 ##Usage
@@ -82,7 +82,7 @@ which will be placed in the directory configured in <code>css.output.folders</co
 Minify-config uses Googles's htmlcompressor for compacting your html. 
 It's required you have java installed for minifying your html templates.
 
-Html Parser follows Javascript/Css parser syntax. Allowing users to minify both single files, or an entire folder, matching files with (html|htm|tpl) extension.
+Html Parser follows Javascript/Css parser syntax. Allowing users to minify both single files, or an entire folder, matching files with (html|html|tpl) extension.
 
 ##Sublime Text 2
 

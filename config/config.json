@@ -1,0 +1,31 @@
+{
+    "javascript": {
+        "files": {
+            "app": [
+                "js/jquery.js",
+                "js/bootstrap.js",              
+                "js/plugins.js",
+                "js/main.js"
+            ]
+        },
+        "folders": "js/(vendor|plugins)",
+        "output": {
+            "files": "js/min",
+            "folders": "${folder}/min"
+        }
+    },
+    "css": {
+        "files": {
+            "app": [
+                "css/bootstrap.css",
+                "css/bootstrap-responsive.css",
+                "css/main.less"
+            ]
+        },
+        "folders": "css/(less)",
+        "output": {
+            "files": "css/",
+            "folders": "${folder}/min"
+        }
+    }
+}

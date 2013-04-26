@@ -1,0 +1,3 @@
+minifyconfig
+
+PAUSE

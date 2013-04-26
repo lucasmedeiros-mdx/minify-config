@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+var minifyconfig = require("../lib/minify-config.js"),
+	args 		 = process.argv.splice(2);
+
+minifyconfig.build(args);
