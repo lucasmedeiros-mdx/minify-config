@@ -5,7 +5,7 @@ Configuration tool for minifying your scripts.
 
 ##Installation
 
-> npm install minify-config
+> npm install -g minify-config
 
 
 ##Usage
