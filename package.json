@@ -1,6 +1,6 @@
 {
   "name": "minify-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Lucas Medeiros <mdx.lucasmedeiros@gmail.com>",
   "description": "json based configuration tool for minifying your scripts/styles",
   "main": "./lib/minify-config.js",
