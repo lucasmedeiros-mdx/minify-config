@@ -1,5 +1,5 @@
 {
   "cmd": ["minifyconfig", "-f", "$file"],
-	"selector": "source.json",
-	"shell": true
+  "selector": "source.json",
+  "shell": true
 }
