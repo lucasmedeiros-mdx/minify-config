@@ -92,7 +92,7 @@ Se todos os caminhos foram definidos corretamente, será exibido na tela quais o
 
 ##Sublime Text 2
 
-Embora não sejá necessário, é indicado que você utilize o editor Sublime Text 2 facilitar seu ambiente de desenvolvimento.
+Embora não seja necessário, é indicado que você utilize o editor Sublime Text 2 facilitar seu ambiente de desenvolvimento.
 
 > C:\Users\<username>\AppData\Roaming\npm\node_modules\minify-config\config
 
