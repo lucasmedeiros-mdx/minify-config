@@ -15,7 +15,7 @@ Com o npm instalado, resta apenas realizar a instalação da biblioteca:
 
 > npm install -g minify-config
 
-A opção -g indica que a biblioteca minify-config estará disponível para ser utilizada através da linha de comando, caso o objetivo sejá utilizar a biblioteca como api esta opção não é necessária.
+A opção -g indica que a biblioteca minify-config estará disponível para ser utilizada através da linha de comando, caso o objetivo seja utilizar a biblioteca como API esta opção não é necessária.
 
 
 ##Configuração
