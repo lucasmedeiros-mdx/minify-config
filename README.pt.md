@@ -3,7 +3,7 @@ minify-config.js
 minify-config é uma ferramenta baseada em node.js para facilitar e permitir a configuração da minificação de seus scripts/estilos.
 
 
-###Instalação
+##Instalação
 
 Se você ainda não possui o node.js instalado, faça o download do mesmo em : [http://nodejs.org/](http://nodejs.org/)
 
