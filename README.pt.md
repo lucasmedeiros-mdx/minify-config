@@ -103,5 +103,6 @@ Pronto, o comando será processado via linha de comando e seus arquivos serão c
 
 ##Informações
 
-Acesse [lmedeiros.com](http://lmedeiros.com) para mais informações
+Acesse [lmedeiros.com](http://lmedeiros.com) para mais informações.
+
 Copyright (c) 2013 Lucas Medeiros
