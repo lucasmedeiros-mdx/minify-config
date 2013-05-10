@@ -79,13 +79,26 @@ The html parser follows the javascript/css parser syntax. Allowing you to compac
 
 ##Applying to your Project
 
-To use the library in your project you must place the configuration file on the root of your application (or in the directory that you find more appropriate) with the correct path for the files location. Now just run the process (command line) making sure to be in the directory where the config.json is stored:
+To use the library in your project you must place the configuration file on the root of your application (or in the directory that you find more appropriate) with the correct path for the files location. 
+
+
+###Command Line
+
+Now just run the process (command line) making sure to be in the directory where the config.json is stored:
 
 > minifyconfig -f config.json
 
 If all paths were set correctly, will be displayed on the screen which processes were executed and which files were generated.
 
 > __Windows__: You may also execute the automin.bat file (copy it from the config folder). This file will automatically execute the command above.
+
+**Options**:
+* **-h, --help**     Output usage information
+* **-V, --version**  Output the version number
+* **-f, --file**     Set the configuration file.
+* **-s, --stats**    Show parsed commands in console
+* **-a, --auto**     Automatically check for changes and minify configurated files
+* **-u, --unique**   Parse configuration and minify a single specified file
 
 
 
