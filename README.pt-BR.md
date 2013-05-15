@@ -37,7 +37,7 @@ Para configurar a biblioteca para minificar sua aplicação, faça o [download d
                 "js/main.js"
             ]
         },
-        "folders": "js/(vendor|plugins)",
+        "folders": "js/*(vendor|plugins)",
         "output": {
             "files": "js/min",
             "folders": "${folder}/min"
@@ -51,7 +51,7 @@ Para configurar a biblioteca para minificar sua aplicação, faça o [download d
                 "css/main.less"
             ]
         },
-        "folders": "css/(less)",
+        "folders": "css/*(less)",
         "output": {
             "files": "css/",
             "folders": "${folder}/min"
