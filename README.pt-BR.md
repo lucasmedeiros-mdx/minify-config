@@ -91,12 +91,12 @@ Agora basta rodar o processo (linha de comando) certificando-se de estar no dire
 Se todos os caminhos foram definidos corretamente, será exibido na tela quais os processos foram executados e quais arquivos foram gerados.
 
 **Options**:
-* [b]-h, --help[/b]     Output usage information
-* [b]-V, --version[/b]  Output the version number
-* [b]-f, --file[/b]     Set the configuration file.
-* [b]-s, --stats[/b]    Show parsed commands in console
-* [b]-a, --auto[/b]     Automatically check for changes and minify configurated files
-* [b]-u, --unique[/b]   Parse configuration and minify a single specified file
+* **-h, --help**     Output usage information
+* **-V, --version**  Output the version number
+* **-f, --file**     Set the configuration file.
+* **-s, --stats**    Show parsed commands in console
+* **-a, --auto**     Automatically check for changes and minify configurated files
+* **-u, --unique**   Parse configuration and minify a single specified file
 
 
 
