@@ -3,7 +3,7 @@ minify-config.js
 minify-config é uma ferramenta baseada em node.js para facilitar e permitir a configuração da minificação de seus scripts/estilos.
 
 
-##Instalação
+###Instalação
 
 Se você ainda não possui o node.js instalado, faça o download do mesmo em : [http://nodejs.org/](http://nodejs.org/)
 
@@ -18,13 +18,13 @@ Com o npm instalado, resta apenas realizar a instalação da biblioteca:
 A opção -g indica que a biblioteca minify-config estará disponível para ser utilizada através da linha de comando, caso o objetivo seja utilizar a biblioteca como API esta opção não é necessária.
 
 
-##Configuração
+###Configuração
 
 Para configurar a biblioteca para minificar sua aplicação, faça o [download do arquivo de configuração default](#) ou copie do seu diretório npm.
 
 > __Windows__: C:\Users\<username>\AppData\Roaming\npm\node_modules\minify-config\config
 
-###config.json  
+####config.json  
 
 ```json
 {
@@ -61,7 +61,7 @@ Para configurar a biblioteca para minificar sua aplicação, faça o [download d
 ```
 
 
-###Javascript / CSS
+####Javascript / CSS
 A biblioteca permite que você compacte tanto seus scripts no formato js, quanto seus estilos em formato [Less](http://lesscss.org) ou css. 
 Você pode minificar vários (ou todos) scripts em um único arquivo, reduzindo assim o número de requests necessários para a aplicação. No arquivo JSON de configuração, cada chave em "files" representa o nome que o arquivo minificado irá receber.
 
@@ -72,18 +72,18 @@ Além de arquivos unitários, você pode configurar para minificar um diretório
 [¹] <code>javascript.folders</code> e <code>css.folders</code> permitem a utilização de expressões [Glob](https://npmjs.org/package/glob) para detectar os diretórios.
 
 
-### Html
+#### Html
 
 Minify-config utiliza a lib htmlcompressor da Google para compactar seu html. Sendo necessário você possuir o Java instalado para minificar seus templates.
 
 O parser html segue o padrão de sintaxe do parser javascript/css. Permitindo a minificação de diretórios inteiros ou arquivos específicos.
 
 
-##Aplicando no seu projeto
+###Aplicando no seu projeto
 
 Para utilizar a biblioteca em seu projeto você deve colocar o arquivo de configuração na base de sua aplicação (ou no diretório que julgar adequado), informando o path correto para a localização dos arquivos.
 
-###Linha de Comando 
+####Linha de Comando 
 Agora basta rodar o processo (linha de comando) certificando-se de estar no diretório onde o config.json está armazenado:
 
 > minifyconfig -f config.json
@@ -105,7 +105,7 @@ Se todos os caminhos foram definidos corretamente, será exibido na tela quais o
 
 
 
-##Sublime Text 2
+###Sublime Text 2
 
 Embora não seja necessário, é indicado que você utilize o editor Sublime Text 2 facilitar seu ambiente de desenvolvimento.
 
@@ -116,7 +116,7 @@ No diretório config da biblioteca está disponível um snippet para facilitar o
 Para agilizar o processo de minificação, adicione a build <code>Minify.sublime-build</code> em seu Sublime. Basta definir a build system default como Minify (Tools > Build System) e após isso realizar o build.
 Pronto, o comando será processado via linha de comando e seus arquivos serão criados.
 
-##Informações
+###Informações
 
 Acesse [lmedeiros.com](http://lmedeiros.com) para mais informações.
 

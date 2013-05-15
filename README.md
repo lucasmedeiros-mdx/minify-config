@@ -3,7 +3,7 @@ minify-config.js
 minify-config is a node.js configuration tool for easily minifying your scripts/stylesheets.
 
 
-##Installation
+###Installation
 
 If you still don't have node.js installed, download it at [http://nodejs.org/](http://nodejs.org/).
 
@@ -18,13 +18,13 @@ Considering npm was successfully configured, install the minify-config lib:
 The -g option indicates the lib minify-config will be available for command line usage, if your objective is use the lib as an API this option isn't needed.
 
 
-##Configuration
+###Configuration
 
 To configure the library to minify your application, [download the default configuration file](#) or copy it from your npm directory.
 
 > __Windows__: C:\Users\<username>\AppData\Roaming\npm\node_modules\minify-config\config
 
-###config.json  
+####config.json  
 
 ```json
 {
@@ -58,8 +58,8 @@ To configure the library to minify your application, [download the default confi
 }
 ```
 
-###Javascript / CSS
-The library allows you to compact both your scripts in js extension, as your stylesheets in [Less] (http://lesscss.org) or css extension.
+####Javascript / CSS
+The library allows you to compact both your scripts in js extension, as your stylesheets in [Less](http://lesscss.org) or css extension.
 You might minify many scripts to a single file, reducing the number of http requests your application requires. 
 
 E.g., in the default configuration file, <code>js/plugins.js js/main.js</code> will be minified to <code>app.min.js</code>, and stored in the directory defined in <code>javascript.output.files</code> (js/min) tag.
@@ -69,7 +69,7 @@ Besides a single file, you may configure minify-config for minifying an entire f
 [¹] <code>javascript.folders</code> and <code>css.folders</code> allow the use of [Glob](https://npmjs.org/package/glob) expressions for parsing your folders.
 
 
-### Html
+#### Html
 
 Minify-config uses Google's htmlcompressor lib for compacting your html. It's required you have Java installed for minifying your templates.
 
@@ -77,12 +77,12 @@ The html parser follows the javascript/css parser syntax. Allowing you to compac
 
 
 
-##Applying to your Project
+###Applying to your Project
 
 To use the library in your project you must place the configuration file on the root of your application (or in the directory that you find more appropriate) with the correct path for the files location. 
 
 
-###Command Line
+####Command Line
 
 Now just run the process (command line) making sure to be in the directory where the config.json is stored:
 
@@ -101,7 +101,7 @@ If all paths were set correctly, will be displayed on the screen which processes
 * **-u, --unique**   Parse configuration and minify a single specified file
 
 
-##Sublime Text 2
+###Sublime Text 2
 
 It's not required, but Sublime Text editor is highly recommended for improving your development workflow.
 
@@ -115,7 +115,7 @@ It's ready, the command will be processed through command line and your files wi
 #####_Comming soon: Sublime Minify Config package_#####
 
 
-##Informations
+###Informations
 
 Access [lmedeiros.com](http://lmedeiros.com) for more informations.
 
