@@ -81,13 +81,28 @@ O parser html segue o padrão de sintaxe do parser javascript/css. Permitindo a 
 
 ##Aplicando no seu projeto
 
-Para utilizar a biblioteca em seu projeto você deve colocar o arquivo de configuração na base de sua aplicação (ou no diretório que julgar adequado), informando o path correto para a localização dos arquivos. Agora basta rodar o processo (linha de comando) certificando-se de estar no diretório onde o config.json está armazenado:
+Para utilizar a biblioteca em seu projeto você deve colocar o arquivo de configuração na base de sua aplicação (ou no diretório que julgar adequado), informando o path correto para a localização dos arquivos.
+
+###Linha de Comando 
+Agora basta rodar o processo (linha de comando) certificando-se de estar no diretório onde o config.json está armazenado:
 
 > minifyconfig -f config.json
 
 Se todos os caminhos foram definidos corretamente, será exibido na tela quais os processos foram executados e quais arquivos foram gerados.
 
+**Options**:
+* [b]-h, --help[/b]     Output usage information
+* [b]-V, --version[/b]  Output the version number
+* [b]-f, --file[/b]     Set the configuration file.
+* [b]-s, --stats[/b]    Show parsed commands in console
+* [b]-a, --auto[/b]     Automatically check for changes and minify configurated files
+* [b]-u, --unique[/b]   Parse configuration and minify a single specified file
+
+
+
 > __Windows__: Você pode executar o arquivo automin.bat (copie do diretório config da biblioteca minify-config informado anteriormente). Este arquivo irá executar de maneira automática o comando acima.
+
+
 
 
 ##Sublime Text 2

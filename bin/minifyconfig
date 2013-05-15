@@ -1,6 +1,20 @@
 #!/usr/bin/env node
 
 var minifyconfig = require("../lib/minify-config.js"),
-	args 		 = process.argv.splice(2);
+    program    = require('commander');
 
-minifyconfig.build(args);
+
+program
+    .version('0.1.4')
+    .option('-f, --file <type>', 'Set the configuration file. Default "config.json"')
+    .option('-s, --stats <n>', 'Show parsed commands in console')
+    .option('-a, --auto', 'Automatically check for changes and minify configurated files')
+    .option('-u, --unique <type>', 'Parse configuration and minify a single specified file')
+    .parse(process.argv);
+
+minifyconfig.build({
+    file: program.file || 'config.json',
+    stats: program.stats || 1,
+    auto: program.auto || false,
+    unique: program.unique
+});

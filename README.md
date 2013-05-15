@@ -1,24 +1,28 @@
 minify-config.js
 ================
-Configuration tool for minifying your scripts.
-
-
-##Introduction
-
-Minify-config is a json based application for minifying your files in an organized and quick way.
-It requires that you have node.js and npm installed.
+minify-config is a node.js configuration tool for easily minifying your scripts/stylesheets.
 
 
 ##Installation
 
+If you still don't have node.js installed, download it at [http://nodejs.org/](http://nodejs.org/).
+
+If everything went as expected, npm (Node Packaged Modules) was configured with node.js. Verify it typing the following command (in command line):
+
+> npm --version
+
+Considering npm was successfully configured, install the minify-config lib:
+
 > npm install -g minify-config
 
+The -g option indicates the lib minify-config will be available for command line usage, if your objective is use the lib as an API this option isn't needed.
 
-##Usage
 
-Copy the default config file from the npm folder (or bellow).
+##Configuration
 
-> __Windows__: C:\Users\\&lt;username&gt;\AppData\Roaming\npm\node_modules\minify-config\config
+To configure the library to minify your application, [download the default configuration file](#) or copy it from your npm directory.
+
+> __Windows__: C:\Users\<username>\AppData\Roaming\npm\node_modules\minify-config\config
 
 ###config.json  
 
@@ -27,13 +31,11 @@ Copy the default config file from the npm folder (or bellow).
     "javascript": {
         "files": {
             "app": [
-                "js/jquery.js",
-                "js/bootstrap.js",              
                 "js/plugins.js",
                 "js/main.js"
             ]
         },
-        "folders": "js/(vendor|plugins)",
+        "folders": "js/*(vendor|plugins)",
         "output": {
             "files": "js/min",
             "folders": "${folder}/min"
@@ -47,7 +49,7 @@ Copy the default config file from the npm folder (or bellow).
                 "css/main.less"
             ]
         },
-        "folders": "css/(less)",
+        "folders": "css/*(less)",
         "output": {
             "files": "css/",
             "folders": "${folder}/min"
@@ -55,60 +57,66 @@ Copy the default config file from the npm folder (or bellow).
     }
 }
 ```
-    
+
 ###Javascript / CSS
+The library allows you to compact both your scripts in js extension, as your stylesheets in [Less] (http://lesscss.org) or css extension.
+You might minify many scripts to a single file, reducing the number of http requests your application requires. 
 
-Minify-config uses uglify-js for compacting your javascript and less for compacting your css/less.
-It allows minifying all your scripts to a single one, each key in <code>files</code> tag represents the name the minified file will receive.
+E.g., in the default configuration file, <code>js/plugins.js js/main.js</code> will be minified to <code>app.min.js</code>, and stored in the directory defined in <code>javascript.output.files</code> (js/min) tag.
 
-In the default configuration, 
-<code>js/jquery.js js/bootstrap.js js/plugins.js js/main.js</code>
-will be minified to <code>app.min.js</code> inside the folder set in <code>javascript.output.files</code> tag.
+Besides a single file, you may configure minify-config for minifying an entire folder in <code>folders</code> tag. <code>folders</code> may receive an Array setting the directories that will be minified, or an regular expression¹.
 
-<code>javascript.folders</code> and <code>css.folders</code> allow glob expressions for matching your folders.
-  
- 
-###Html
-Minify-config uses Googles's htmlcompressor for compacting your html. 
-It's required you have java installed for minifying your html templates.
-
-Html Parser follows Javascript/Css parser syntax. Allowing users to minify both single files, or an entire folder, matching files with (html|html|tpl) extension.
+[¹] <code>javascript.folders</code> and <code>css.folders</code> allow the use of [Glob](https://npmjs.org/package/glob) expressions for parsing your folders.
 
 
-##Applying to your project
+### Html
 
-Place the configurated json file in your root directory (or where you think it's better) with the correct path for your files.
-Now simply run the following from command line:
+Minify-config uses Google's htmlcompressor lib for compacting your html. It's required you have Java installed for minifying your templates.
 
->minifyconfig -f config.json
+The html parser follows the javascript/css parser syntax. Allowing you to compact specific files or entire directories.
 
-You might also execute the "automin" file placed in the config directory, which will run the command above.
+
+
+##Applying to your Project
+
+To use the library in your project you must place the configuration file on the root of your application (or in the directory that you find more appropriate) with the correct path for the files location. 
+
+
+###Command Line
+
+Now just run the process (command line) making sure to be in the directory where the config.json is stored:
+
+> minifyconfig -f config.json
+
+If all paths were set correctly, will be displayed on the screen which processes were executed and which files were generated.
+
+> __Windows__: You may also execute the automin.bat file (copy it from the config folder). This file will automatically execute the command above.
+
+**Options**:
+* **-h, --help**     Output usage information
+* **-V, --version**  Output the version number
+* **-f, --file**     Set the configuration file.
+* **-s, --stats**    Show parsed commands in console
+* **-a, --auto**     Automatically check for changes and minify configurated files
+* **-u, --unique**   Parse configuration and minify a single specified file
 
 
 ##Sublime Text 2
 
-> C:\Users\\&lt;username&gt;\AppData\Roaming\npm\node_modules\minify-config\config
+It's not required, but Sublime Text editor is highly recommended for improving your development workflow.
 
-In your npm folder, there's a snippet for quickly creating your config.json file to your projects.    
-Simply apply it to Sublime Text 2, the word "minify" triggers the snippet.
+> C:\Users\<username>\AppData\Roaming\npm\node_modules\minify-config\config
 
-##Alpha
-Minify-config is still in it's alpha version and the following tasks are being implemented
+Check it out <code>Minify.sublime-build</code> and <code>minify.sublime-snippet</code> set in the config folder.
 
-###TO DO
-* Web page explaining the config.json file line by line
-* Pre-configured example application + Sublime Fetch Download
-* Sublime package
-    * Snippets for quickly creating your configuration file
-    * Build and execute minify-config directly from Sublime Text
-    * Smart build detecting if the file is in a package and automatically compiling the entire group
-* Unit Tests and TravisCI
+To make the whole proccess even faster, add the build <code> Minify.sublime-build </code> on your Sublime. Just set the default build system as Minify (Tools> Build System) and after that perform the build.
+It's ready, the command will be processed through command line and your files will be generated.
+
+#####_Comming soon: Sublime Minify Config package_#####
 
 
-Need something more robust? You're probably looking for [Grunt](http://gruntjs.com/).
+##Informations
 
-
-
-##Information
+Access [lmedeiros.com](http://lmedeiros.com) for more informations.
 
 Copyright (c) 2013 Lucas Medeiros
